@@ -66,20 +66,22 @@ nav a:hover{color:var(--accent)}
 .k .d{margin-top:8px;font-size:12.5px;color:var(--ink-soft);line-height:1.45}
 
 /* 타임라인 */
-.tl{display:flex;align-items:flex-end;margin-top:6px}
-.tcol{display:flex;flex-direction:column;min-width:0}
-.tcol .role{font-size:14px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tcol .dur{font-family:var(--lb);font-size:10.5px;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted);margin:2px 0 8px}
-.tcol .bar{height:22px;border:1px solid var(--rule);border-right:0}
-.tcol.ops .bar{background:var(--wash)}
-.tcol.pm .bar{background:var(--accent);border-color:var(--accent)}
-.tcol .date{font-family:var(--mo);font-size:11px;color:var(--muted);margin-top:7px}
-.tend .bar{width:2px;background:var(--ink);height:22px}
-.tend .date{font-family:var(--mo);font-size:11px;color:var(--ink);font-weight:600;margin-top:7px;text-align:right}
-.tlnote{margin-top:14px;font-size:13.5px;color:var(--ink-soft)}
-.tlnote b{color:var(--ink)}
-
+.tlbar{display:flex;height:20px;border-radius:4px;overflow:hidden;border:1px solid var(--rule)}
+.tlbar .seg{min-width:0}
+.seg.j1{background:#E7E1D4}
+.seg.gap{background:repeating-linear-gradient(45deg,transparent,transparent 4px,var(--rule) 4px,var(--rule) 5px)}
+.seg.j2{background:#EFD3BE}
+.seg.j3{background:#E0A57F}
+.seg.j4{background:var(--accent)}
+.tlticks{display:flex;margin-top:6px;font-family:var(--mo);font-size:10.5px;color:var(--muted)}
+.tlticks span{min-width:0;white-space:nowrap;overflow:visible}
+.tlg{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;margin-top:18px}
+@media(max-width:640px){.tlg{grid-template-columns:1fr}}
+.tlg .row{display:flex;gap:10px;align-items:baseline;font-size:13.5px;line-height:1.5}
+.tlg .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0;position:relative;top:1px;border:1px solid var(--rule)}
+.tlg .pd{font-family:var(--mo);font-size:11px;color:var(--muted);white-space:nowrap;width:132px;flex-shrink:0}
+.tlg .who{font-weight:800;white-space:nowrap}
+.tlg .what{color:var(--ink-soft)}
 /* 고지 */
 .note{border:1px solid var(--accent);border-left-width:4px;border-radius:4px;
   background:var(--wash);padding:18px 22px;font-size:14px;color:var(--accent-deep);margin-top:26px}
@@ -149,7 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   <h1 class="rv">반복되는 업무를 발견해서,<br><em>구조로 바꾸는 일</em>을 합니다.</h1>
   <p class="sub rv">운영 담당자로 2년간 매일 반복되는 업무를 몸으로 겪고 도구·자동화로 없앴습니다.
     제품팀으로 옮긴 뒤에는 같은 문제를 권한 체계·운영 정책·처리 절차 수준에서 다시 설계하고 있습니다.</p>
-  <div class="meta rv"><span><b>양준호</b></span><span>wnsgh4923@gmail.com</span><span>서비스 운영 · 기획</span></div>
+  <div class="meta rv"><span><b>양준호</b></span><span>wnsgh4923@gmail.com</span><span>서비스 운영 · 기획 — <b>경력 5년</b></span></div>
 </header>
 
 <main class="wrap">
@@ -177,21 +179,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
   <div class="sec"><span class="n">02</span><span class="lb">커리어</span></div>
   <div class="rv">
-    <div class="tl">
-      <div class="tcol ops" style="flex:24">
-        <div class="role">서비스운영팀 · 운영</div>
-        <div class="dur">2년 — 반복 업무를 겪고 없앤 시기</div>
-        <div class="bar"></div><div class="date">2024.04</div>
-      </div>
-      <div class="tcol pm" style="flex:6">
-        <div class="role">제품팀 · 기획</div>
-        <div class="dur">설계로 확장</div>
-        <div class="bar"></div><div class="date">2026.04</div>
-      </div>
-      <div class="tend"><div style="height:41px"></div><div class="bar"></div><div class="date">현재</div></div>
+    <div class="tlbar">
+      <span class="seg j1" style="flex:24"></span>
+      <span class="seg gap" style="flex:15"></span>
+      <span class="seg j2" style="flex:11"></span>
+      <span class="seg j3" style="flex:24"></span>
+      <span class="seg j4" style="flex:6"></span>
     </div>
-    <p class="tlnote"><b>운영</b> — 팀원 IT 문의 대응, 신규 입사자 시스템 세팅, 반복 업무를 도구·자동화로 제거 ·
-      <b>기획</b> — CRM 전환 리드, 권한 거버넌스, 이슈 처리 체계, 장애 원인 분석</p>
+    <div class="tlticks">
+      <span style="flex:24">2020.02</span>
+      <span style="flex:15"></span>
+      <span style="flex:11">2023.05</span>
+      <span style="flex:24">2024.04</span>
+      <span style="flex:6;text-align:right">현재</span>
+    </div>
+    <div class="tlg">
+      <div class="row"><span class="sw" style="background:var(--accent)"></span>
+        <span class="pd">2026.04 — 현재</span>
+        <span><span class="who">젠트 · 제품팀 기획</span> <span class="what">— 권한 거버넌스, 이슈 처리 체계, 장애 RCA를 구조로 설계</span></span></div>
+      <div class="row"><span class="sw" style="background:#E0A57F"></span>
+        <span class="pd">2024.04 — 2026.04</span>
+        <span><span class="who">젠트 · 서비스운영팀</span> <span class="what">— IT 문의 대응, 입사자 세팅, 도구 13종 제작·배포</span></span></div>
+      <div class="row"><span class="sw" style="background:#EFD3BE"></span>
+        <span class="pd">2023.05 — 2024.04</span>
+        <span><span class="who">지수회계법인</span> <span class="what">— 경정청구 실무, 신고서 제작·검증 자동화(VBA)</span></span></div>
+      <div class="row"><span class="sw" style="background:#E7E1D4"></span>
+        <span class="pd">2020.02 — 2022.02</span>
+        <span><span class="who">농협중앙회</span> <span class="what">— 3,500명 훈련 관리, 민원 셀프서비스 전환</span></span></div>
+    </div>
+    <p class="tlnote">첫 직장의 엑셀 셀프서비스부터 지금의 권한·정책 설계까지 — <b>반복 업무를 구조로 없애는 같은 일</b>을 도구만 바꿔가며 해왔습니다.</p>
     <div class="note"><span class="h">구현 방식 — 미리 밝혀둡니다</span>
       저는 <b>개발자가 아닙니다.</b> 아래 도구·자동화의 코드는 <b>AI 코딩 도구로 작성</b>했습니다.
       제가 한 일은 무엇을 만들지 정하고 · 구조와 안전장치를 설계하고 · 실패 원인을 규명하고 ·

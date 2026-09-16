@@ -68,10 +68,10 @@ nav a:hover{color:var(--accent)}
 /* 타임라인 */
 .tlbar{display:flex;height:20px;border-radius:4px;overflow:hidden;border:1px solid var(--rule)}
 .tlbar .seg{min-width:0}
-.seg.j1{background:#E7E1D4}
+.seg.j1{background:#E2E8F0}
 .seg.gap{background:repeating-linear-gradient(45deg,transparent,transparent 4px,var(--rule) 4px,var(--rule) 5px)}
-.seg.j2{background:#EFD3BE}
-.seg.j3{background:#E0A57F}
+.seg.j2{background:#C9D9F2}
+.seg.j3{background:#8FB1E8}
 .seg.j4{background:var(--accent)}
 .tlticks{display:flex;margin-top:6px;font-family:var(--mo);font-size:10.5px;color:var(--muted)}
 .tlticks span{min-width:0;white-space:nowrap;overflow:visible}
@@ -185,27 +185,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <span class="seg j1" style="flex:24"></span>
       <span class="seg gap" style="flex:15"></span>
       <span class="seg j2" style="flex:11"></span>
-      <span class="seg j3" style="flex:24"></span>
-      <span class="seg j4" style="flex:6"></span>
+      <span class="seg j4" style="flex:30"></span>
     </div>
     <div class="tlticks">
       <span style="flex:24">2020.02</span>
       <span style="flex:15"></span>
       <span style="flex:11">2023.05</span>
-      <span style="flex:24">2024.04</span>
-      <span style="flex:6;text-align:right">현재</span>
+      <span style="flex:30">2024.04</span>
+      <span style="text-align:right">현재</span>
     </div>
     <div class="tlg">
-      <div class="row"><span class="sw" style="background:var(--accent)"></span>
-        <span class="pd">2026.04 — 현재</span>
-        <span><span class="who">지엔터프라이즈 · 제품팀 기획</span> <span class="what">— 권한 거버넌스, 이슈 처리 체계, 장애 RCA를 구조로 설계</span></span></div>
-      <div class="row"><span class="sw" style="background:#E0A57F"></span>
-        <span class="pd">2024.04 — 2026.04</span>
-        <span><span class="who">지엔터프라이즈 · 서비스운영팀</span> <span class="what">— IT 문의 대응, 입사자 세팅, 도구 13종 제작·배포</span></span></div>
-      <div class="row"><span class="sw" style="background:#EFD3BE"></span>
+      <div class="row" style="grid-column:1/-1"><span class="sw" style="background:var(--accent)"></span>
+        <span class="pd">2024.04 — 현재</span>
+        <span><span class="who">지엔터프라이즈</span> <span class="what">— 운영 2년(IT 문의 대응·입사자 세팅·도구 13종 제작·배포) → 2026.04 사내 이동, 제품팀 기획(권한 거버넌스·이슈 처리 체계·장애 RCA)</span></span></div>
+      <div class="row"><span class="sw" style="background:#C9D9F2"></span>
         <span class="pd">2023.05 — 2024.04</span>
         <span><span class="who">지수회계법인</span> <span class="what">— 경정청구 실무, 신고서 제작·검증 자동화(VBA)</span></span></div>
-      <div class="row"><span class="sw" style="background:#E7E1D4"></span>
+      <div class="row"><span class="sw" style="background:#E2E8F0"></span>
         <span class="pd">2020.02 — 2022.02</span>
         <span><span class="who">농협중앙회</span> <span class="what">— 3,500명 훈련 관리, 민원 셀프서비스 전환</span></span></div>
     </div>
